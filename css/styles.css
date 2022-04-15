@@ -32,7 +32,7 @@ body{
     background-color: black;
     align-self: flex-start;
     width: 100%;
-    height: 76vh;
+    height: 100vh;
     animation: fade 3.5s; 
     animation-iteration-count: 1;
 }
@@ -60,7 +60,9 @@ body{
     position: absolute;
     bottom: 40vh;   
     height: 35vh; 
-    animation: introTitulo 2s 1;   
+    animation: introTitulo 2s 1 ;
+    opacity: 0;
+    animation-delay: .3s;   
 }
 .seccion{
     position: absolute;
@@ -69,7 +71,8 @@ body{
     box-shadow: 15px 15px 15px black;
     background-color: rgb(195, 226, 226);
     padding-left: 3em;
-    padding-right: 3em;    
+    padding-right: 3em;  
+    animation: introSeccion 4s 1;  
 }
 .contenedor-principal{   
     display: flex;
@@ -182,6 +185,11 @@ button{
     font-family: 'Cinzel', serif;
     font-weight: bold;    
 }
+button:hover{
+    background-color: white;
+    color: black;
+
+}
 
 
 @keyframes fade{
@@ -189,16 +197,28 @@ button{
        opacity: 1;     
     }
     to{
-        opacity: 0;       
+        opacity: 0;           
     }
 }
 @keyframes introTitulo{
-    0%{       
+    0%{   
+        opacity: 0;    
         height: 25vh;   
-        opacity: 0;
+        
     }
     100%{
         opacity: 1;       
         height: 35vh;    
+    }
+}
+@keyframes introSeccion{
+    0%{  
+        opacity: 0;
+    }
+    30%{
+        opacity: .1;
+    }
+    99%{
+        opacity: 1;
     }
 }

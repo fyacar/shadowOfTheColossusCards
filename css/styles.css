@@ -53,6 +53,10 @@ body{
 .menu li {
     cursor: pointer;
 }
+.menu li:hover{
+    color: rgb(5, 155, 197);    
+    text-shadow: 2px 2px 2px black; 
+}
 .seleccionado{
     border-bottom: solid 1px black;
 }

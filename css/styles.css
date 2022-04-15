@@ -1,0 +1,204 @@
+*{
+    border: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+   background: url(/imgs/fondo.jpg);
+   font-family: 'Poppins', sans-serif; 
+   font-family: 'Cinzel', serif;
+  
+  
+}
+.presentacion{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.hero{
+    position: absolute;
+    align-self: flex-start;
+    width: 100%;
+    height: 80vh;
+    background: url("/imgs/banner.jpeg");   
+    background-repeat: no-repeat;    
+    z-index: -10;    
+}
+.hero-sombra{
+    z-index: -9;
+    background-color: black;
+    align-self: flex-start;
+    width: 100%;
+    height: 76vh;
+    animation: fade 3.5s; 
+    animation-iteration-count: 1;
+}
+
+.menu-contenedor{
+    position: absolute;
+    padding: .5em;
+    padding-right: 1.5em;
+    top: 0;
+    right: 0;    
+}
+.menu{
+    list-style: none;
+    display: flex;
+    gap: 1.5em;
+    font-weight: bold;
+}
+.menu li {
+    cursor: pointer;
+}
+.seleccionado{
+    border-bottom: solid 1px black;
+}
+.titulo{
+    position: absolute;
+    bottom: 40vh;   
+    height: 35vh; 
+    animation: introTitulo 2s 1;   
+}
+.seccion{
+    position: absolute;
+    bottom: 6.2vh;
+    font-size: 2.5rem;
+    box-shadow: 15px 15px 15px black;
+    background-color: rgb(195, 226, 226);
+    padding-left: 3em;
+    padding-right: 3em;    
+}
+.contenedor-principal{   
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap:1em;
+    
+}
+.contenedor-card{         
+    padding: 1.5em;
+   width: 40%;
+   min-width: 25em;
+      /*--------------*/
+     perspective:1500px; 
+      /*--------------*/
+      
+}
+.card{    
+    
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 2em;    
+    border-radius: 10px;
+    box-shadow: 0px 10px 10px rgba(0,0,0,0.5),0px 25px 25px rgba(0,0,0,0.3) ;    
+    margin-bottom: 1em;    
+        /* ------------- */
+        transform-style: preserve-3d;
+        /*--------------*/
+    /*background-color: rgba(167, 201, 189, 0.952);*/
+    background-color: rgba(108, 150, 135, 0.966);
+    
+    
+}
+.descripcion{
+    /* ------------- */
+    transform-style: preserve-3d;
+    /*--------------*/
+    transition: all 0.5s ease;
+    
+}
+.figura-contenedor{
+    display: flex;    
+    justify-content: center;    
+        /* ------------- */
+        transform-style: preserve-3d;
+        /*--------------*/
+        /* background-color: azure;   */      
+}
+.fondito{
+    background-color: rgb(223, 245, 245);
+    width: 14em;
+    height: 4em; 
+    top: 2em;  
+    position: absolute;
+    z-index: -12;
+    transition: all 0.5s ease;   
+}
+
+.fondito2{
+    background-color: rgb(102, 190, 190);
+    width: 17em;
+    height: 6em; 
+    top:1em;    
+    position: absolute;
+    z-index: -15;
+    transition: all 0.5s ease;   
+}
+.figura{
+    width: 40%; 
+    margin-top: -1.5em;
+    transition: all 0.5s ease;   
+}
+h3{
+    text-align: center;    
+    margin-top: -1em;  
+    font-size: 1.5rem; 
+    margin-bottom: .5em;
+    transition: all 0.5s ease;   
+   
+    
+}
+h4{
+    margin-bottom: .8em;
+    color:rgb(16, 36, 36);
+    font-weight: 700;
+}
+p{
+    margin-bottom: .8em;
+    font-size: .9rem;
+    font-weight: lighter;
+    color: rgb(223, 245, 245);
+    font-weight: 500;
+}
+
+button{    
+    width: 55%;
+    padding: .8em;
+    border-radius: 15px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 1em;
+    margin-bottom: 1em;    
+    cursor: pointer;
+    transition: all 0.5s ease;   
+    background-color: rgb(102, 190, 190);
+    border: solid 1px rgb(223, 245, 245);
+    color:rgb(0, 0, 0);
+    font-family: 'Poppins', sans-serif; 
+    font-family: 'Cinzel', serif;
+    font-weight: bold;    
+}
+
+
+@keyframes fade{
+    from{
+       opacity: 1;     
+    }
+    to{
+        opacity: 0;       
+    }
+}
+@keyframes introTitulo{
+    0%{       
+        height: 25vh;   
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;       
+        height: 35vh;    
+    }
+}

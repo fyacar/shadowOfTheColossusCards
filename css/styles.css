@@ -192,9 +192,21 @@ button{
 button:hover{
     background-color: white;
     color: black;
-
+}
+footer{    
+    background-color: black;
+    padding: 1em;
 }
 
+footer p {
+    font-size: .67rem;
+    margin-bottom: 0;
+}
+
+footer a{
+    text-decoration: none;
+    color: rgb(102, 190, 190);
+}
 
 @keyframes fade{
     from{
